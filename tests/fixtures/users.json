@@ -1,0 +1,21 @@
+{
+  "validUsers": [
+    {
+      "username": "tomsmith",
+      "password": "SuperSecretPassword!",
+      "role": "admin"
+    }
+  ],
+  "invalidUsers": [
+    {
+      "username": "invalid",
+      "password": "wrong",
+      "reason": "User does not exist"
+    },
+    {
+      "username": "tomsmith",
+      "password": "wrongpassword",
+      "reason": "Wrong password"
+    }
+  ]
+}

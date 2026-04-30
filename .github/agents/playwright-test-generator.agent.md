@@ -1,27 +1,7 @@
 ---
 name: playwright-test-generator
 description: 'Use this agent when you need to create automated browser tests using Playwright Examples: <example>Context: User wants to generate a test for the test plan item. <test-suite><!-- Verbatim name of the test spec group w/o ordinal like "Multiplication tests" --></test-suite> <test-name><!-- Name of the test case without the ordinal like "should add two numbers" --></test-name> <test-file><!-- Name of the file to save the test into, like tests/multiplication/should-add-two-numbers.spec.ts --></test-file> <seed-file><!-- Seed file path from test plan --></seed-file> <body><!-- Test case content including steps and expectations --></body></example>'
-tools:
-  - search
-  - playwright-test/browser_click
-  - playwright-test/browser_drag
-  - playwright-test/browser_evaluate
-  - playwright-test/browser_file_upload
-  - playwright-test/browser_handle_dialog
-  - playwright-test/browser_hover
-  - playwright-test/browser_navigate
-  - playwright-test/browser_press_key
-  - playwright-test/browser_select_option
-  - playwright-test/browser_snapshot
-  - playwright-test/browser_type
-  - playwright-test/browser_verify_element_visible
-  - playwright-test/browser_verify_list_visible
-  - playwright-test/browser_verify_text_visible
-  - playwright-test/browser_verify_value
-  - playwright-test/browser_wait_for
-  - playwright-test/generator_read_log
-  - playwright-test/generator_setup_page
-  - playwright-test/generator_write_test
+tools:[execute/runNotebookCell, execute/getTerminalOutput, execute/killTerminal, execute/sendToTerminal, execute/createAndRunTask, execute/runInTerminal, execute/runTests, execute/testFailure, read/getNotebookSummary, read/problems, read/readFile, read/viewImage, read/terminalSelection, read/terminalLastCommand, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, browser/openBrowserPage, browser/readPage, browser/screenshotPage, browser/navigatePage, browser/clickElement, browser/dragElement, browser/hoverElement, browser/typeInPage, browser/runPlaywrightCode, browser/handleDialog, vscode/getProjectSetupInfo, vscode/installExtension, vscode/memory, vscode/newWorkspace, vscode/resolveMemoryFileUri, vscode/runCommand, vscode/vscodeAPI, vscode/extensions, vscode/askQuestions, execute/runNotebookCell, execute/getTerminalOutput, execute/killTerminal, execute/sendToTerminal, execute/createAndRunTask, execute/runInTerminal, execute/runTests, execute/testFailure, read/readFile, agent/runSubagent, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/searchSubagent, search/usages, browser/openBrowserPage, browser/readPage, browser/screenshotPage, browser/navigatePage, browser/clickElement, browser/dragElement, browser/hoverElement, browser/typeInPage, browser/runPlaywrightCode, browser/handleDialog, playwright-test/browser_click, playwright-test/browser_drag, playwright-test/browser_evaluate, playwright-test/browser_file_upload, playwright-test/browser_handle_dialog, playwright-test/browser_hover, playwright-test/browser_navigate, playwright-test/browser_press_key, playwright-test/browser_select_option, playwright-test/browser_snapshot, playwright-test/browser_type, playwright-test/browser_verify_element_visible, playwright-test/browser_verify_list_visible, playwright-test/browser_verify_text_visible, playwright-test/browser_verify_value, playwright-test/browser_wait_for, playwright-test/generator_read_log, playwright-test/generator_setup_page, playwright-test/generator_write_test, todo/createTodo, todo/listTodos, todo/markTodoComplete, todo/deleteTodo],
 model: Claude Sonnet 4
 mcp-servers:
   playwright-test:

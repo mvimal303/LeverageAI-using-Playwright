@@ -1,0 +1,16 @@
+{
+  "alerts": {
+    "alertMessage": "I am a JS Alert",
+    "confirmMessage": "I am a JS Confirm",
+    "promptMessage": "I am a JS Prompt"
+  },
+  "dropdown": {
+    "options": ["", "1", "2"],
+    "defaultValue": "",
+    "selectedValue": "1"
+  },
+  "checkboxes": {
+    "totalCount": 2,
+    "expectedStates": [false, true]
+  }
+}

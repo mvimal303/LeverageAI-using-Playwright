@@ -1,0 +1,68 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: elements/dropdown.spec.ts >> Dropdown Interactions >> Select Option from Dropdown
+- Location: tests/elements/dropdown.spec.ts:4:3
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: ""
+Received: null
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - link "Fork me on GitHub":
+      - /url: https://github.com/tourdedave/the-internet
+      - img "Fork me on GitHub" [ref=e5] [cursor=pointer]
+    - generic [ref=e7]:
+      - heading "Dropdown List" [level=3] [ref=e8]
+      - combobox [ref=e9]:
+        - option "Please select an option" [disabled] [selected]
+        - option "Option 1"
+        - option "Option 2"
+  - generic [ref=e11]:
+    - separator [ref=e12]
+    - generic [ref=e13]:
+      - text: Powered by
+      - link "Elemental Selenium" [ref=e14] [cursor=pointer]:
+        - /url: http://elementalselenium.com/
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '../hooks/fixtures';
+  2  | 
+  3  | test.describe('Dropdown Interactions', () => {
+  4  |   test('Select Option from Dropdown', async ({ pages, testData }) => {
+  5  |     // Navigate to dropdown page
+  6  |     await pages.dropdownPage.navigateToDropdown();
+  7  | 
+  8  |     // Verify default value
+  9  |     let selectedValue = await pages.dropdownPage.getSelectedValue();
+> 10 |     expect(selectedValue).toBe('');
+     |                           ^ Error: expect(received).toBe(expected) // Object.is equality
+  11 | 
+  12 |     // Select option from test data
+  13 |     const optionToSelect = testData.testData.dropdown.selectedValue;
+  14 |     await pages.dropdownPage.selectOption(optionToSelect);
+  15 | 
+  16 |     // Verify selected value
+  17 |     selectedValue = await pages.dropdownPage.getSelectedValue();
+  18 |     expect(selectedValue).toBe(optionToSelect);
+  19 |   });
+  20 | });
+  21 | 
+```
